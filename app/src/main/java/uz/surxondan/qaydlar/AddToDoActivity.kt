@@ -40,6 +40,7 @@ class AddToDoActivity : AppCompatActivity() {
                 binding.etTodo.setText(todoModelEdit?.title?:"Default")
                 binding.chekkedMuhim.isChecked=todoModelEdit?.isfinish?:false
                 binding.btnAdd.setImageResource(R.drawable.baseline_edit_24)
+                binding.toolbar.title="Qaydni tahrirlayapsiz"
             }
         }
 

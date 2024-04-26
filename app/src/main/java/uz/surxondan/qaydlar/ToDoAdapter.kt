@@ -2,8 +2,6 @@ package uz.surxondan.qaydlar
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Paint
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +15,7 @@ class ToDoAdapter(
 
 ) : RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder>() {
 
-    private val dateList = mutableListOf<ToDoMAdel>()
+    val dateList = mutableListOf<ToDoMAdel>()
              var onLongClick:((todoModel:ToDoMAdel,position:Int)->Unit)?=null
     fun notifyItemDataChanged(position:Int,context: Context,isfinishchekked: Boolean){
 

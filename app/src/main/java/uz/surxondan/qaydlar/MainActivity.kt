@@ -2,16 +2,15 @@ package uz.surxondan.qaydlar
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
-import android.view.Window
-import android.view.WindowInsetsController
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.widget.addTextChangedListener
@@ -70,6 +69,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
     // Edittextning oxirodagi icongasini bosganda yuqolishshi edittextning
     @SuppressLint("ClickableViewAccessibility")
     fun EditText.onRightDrawableClicked(onCliked:(view:EditText)->Unit){
@@ -161,8 +162,20 @@ class MainActivity : AppCompatActivity() {
                 val intent=Intent(this,DasturHaqida::class.java)
                 startActivity(intent)
             }
+            R.id.manba_kodi->{
+                openUrl("https://github.com/Surxondan/Qaydlar")
+            }
+            R.id.saralash_nomidan->{
+                sortListAlphabetically()
+            }
+
         }
         return super.onOptionsItemSelected(item)
+    }
+    private fun openUrl(link:String) {
+        val uri= Uri.parse(link)
+        val intent=Intent(Intent.ACTION_VIEW,uri)
+        startActivity(intent)
     }
 
     override fun onResume() {
@@ -184,6 +197,14 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+    }
+    private fun sortListAlphabetically() {
+        val dataList = SharedPreferenceHelper.getToDoList(this).toMutableList() ?: mutableListOf()
+
+        dataList.sortBy { it.title }
+        SharedPreferenceHelper.saveToDo(dataList,this)
+        toDoAdapter.loadDate(dataList)
+        Toast.makeText(this, "Eslatmalar alfabet bo'yicha tartiblandi", Toast.LENGTH_SHORT).show()
     }
 
     companion object{

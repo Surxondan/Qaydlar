@@ -12,7 +12,7 @@ object SharedPreferenceHelper {
         return context.getSharedPreferences("todoshared", Context.MODE_PRIVATE)
     }
 
-    fun saveToDo(todoList: List<ToDoMAdel>, context: Context) {
+    fun saveToDo(todoList: Any, context: Context) {
         getSharedPreferences(context).edit()?.putString(TODO_KEY, gson.toJson(todoList))?.apply()
     }
 
@@ -29,6 +29,9 @@ object SharedPreferenceHelper {
         fun  clearCache(context: Context){
             getSharedPreferences(context).edit().clear().apply()
         }
+
+
+
     private const val TODO_KEY = "to_do_key"
 }
 
