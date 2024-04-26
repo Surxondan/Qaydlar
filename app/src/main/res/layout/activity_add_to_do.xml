@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddToDoActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:title="Yangi qayd"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:titleTextColor="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"/>
+    <EditText
+        android:id="@+id/et_todo"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/nomi"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/toolbar"
+        android:textColorHint="@color/toolbar"
+
+        />
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/chekked_muhim"
+        android:layout_below="@id/et_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muhim qayd"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/chekked_muhim">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/toolbar"
+        android:src="@drawable/baseline_check_24"
+        app:tint="@color/white"
+        />
+
+</RelativeLayout>

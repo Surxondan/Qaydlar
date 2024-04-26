@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/search"
+    android:title=""
+    android:icon="@drawable/baseline_search_24"
+    app:showAsAction="ifRoom"/>
+    <item android:id="@+id/filter"
+        android:title=""
+        android:icon="@drawable/filter_left_icon_184971"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/saralash_nomidan"
+                android:title="Nomdan saralash"/>
+            <item
+                android:id="@+id/saralash_sanadan"
+                android:title="Sanadan saralash"/>
+        </menu>
+    </item>
+<item android:title=""
+    android:icon="@drawable/baseline_more_vert_24"
+    app:showAsAction="ifRoom">
+    <menu >
+        <item android:id="@+id/bajarilganlar"
+            android:title="Bajarilganlarni yashirish"
+
+            android:icon="@drawable/hide_visibliy"
+            app:showAsAction="never"
+            />
+        <item android:id="@+id/bajar_delet"
+            android:title="Bajarilganlarni o`chirish"
+            android:icon="@drawable/waste_bin_delete_remove_recycle_icon_123840"
+            app:showAsAction="never"
+            />
+        <item android:id="@+id/delet_all_task"
+            android:title="Hammasini o`chirish"
+            app:showAsAction="never"
+            android:icon="@drawable/baseline_delete_sweep_24"
+            />
+        <item android:id="@+id/yordam"
+            android:title="Yordam"
+            app:showAsAction="never"
+            android:icon="@drawable/customerservice_122353"
+            />
+        <item android:id="@+id/ulashish"
+            android:title="Ulashish"
+            app:showAsAction="never"
+            android:icon="@drawable/share2_78604"
+            />
+        <item android:id="@+id/baho_berish"
+            android:title="Baho berish"
+            app:showAsAction="never"
+            android:icon="@drawable/baseline_star_outline_24"
+            />
+        <item android:id="@+id/manba_kodi"
+            android:title="Manba kodi"
+            app:showAsAction="never"
+            android:icon="@drawable/github_git_icon_145985"
+            />
+        <item android:id="@+id/info"
+            android:title="Dastur haqida"
+            android:icon="@drawable/info_se"
+            />
+    </menu>
+</item>
+
+
+
+</menu>

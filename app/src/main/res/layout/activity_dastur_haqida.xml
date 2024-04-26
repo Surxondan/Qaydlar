@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddToDoActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbardastr"
+        android:layout_width="match_parent"
+        app:title="Qaydlar"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:titleTextColor="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"/>
+
+
+<ImageView
+    android:id="@+id/ivicon"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/icon"
+    />
+    <TextView
+        android:id="@+id/tv_tite"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="Qaydlar"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/muli_bold"
+        android:textColor="@color/toolbar"
+        android:layout_below="@id/ivicon"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.1.0"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/muli"
+        android:textColor="@color/toolbar"
+        android:layout_below="@id/tv_tite"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv_taxalus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SURXONDAN"
+        android:textSize="18sp"
+        android:fontFamily="@font/muli_bold"
+        android:textColor="@color/toolbar"
+        android:layout_above="@id/tv_kimdiki"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv_kimdiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jasur"
+        android:textSize="15sp"
+        android:fontFamily="@font/muli"
+        android:textColor="@color/toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>
